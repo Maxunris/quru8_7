@@ -5,7 +5,7 @@ from zipfile import ZipFile
 from utils import pdf_path, txt_path, xls_path, xlsx_path
 
 
-def test_archive_files(tmp_directory):
+def test_main_zip(tmp_directory):
     pdf_size = os.path.getsize(pdf_path)
     pdf_name = os.path.basename(pdf_path)
     text_size = os.path.getsize(txt_path)
@@ -42,11 +42,11 @@ def test_archive_files(tmp_directory):
         xlsx_archive_file_name = xlsx_archive_file.filename
         xlsx_archive_file_size = xlsx_archive_file.file_size
 
-    assert pdf_name == pdf_archive_file_name, print(f"{pdf_name} не равна {pdf_archive_file_name}")
-    assert pdf_size == pdf_archive_file_size, print(f"{pdf_size} не равна {pdf_archive_file_size}")
-    assert text_name == txt_archive_file_name, print(f"{text_name} не равна {txt_archive_file_name}")
-    assert text_size == txt_archive_file_size, print(f"{text_size} не равна {txt_archive_file_size}")
-    assert xls_name == xls_archive_file_name, print(f"{xls_name} не равна {xls_archive_file_name}")
-    assert xls_size == xls_archive_file_size, print(f"{xls_size} не равна {xls_archive_file_size}")
-    assert xlsx_name == xlsx_archive_file_name, print(f"{xlsx_name} не равна {xlsx_archive_file_name}")
-    assert xlsx_size == xlsx_archive_file_size, print(f"{xlsx_size} не равна {xlsx_archive_file_size}")
+    assert pdf_name == pdf_archive_file_name
+    assert pdf_size == pdf_archive_file_size
+    assert text_name == txt_archive_file_name
+    assert text_size == txt_archive_file_size
+    assert xls_name == xls_archive_file_name
+    assert xls_size == xls_archive_file_size
+    assert xlsx_name == xlsx_archive_file_name
+    assert xlsx_size == xlsx_archive_file_size
