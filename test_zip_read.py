@@ -1,8 +1,9 @@
-
-import os.path
-from zipfile import ZipFile
-
 from utils import pdf_path, txt_path, xls_path, xlsx_path
+from zipfile import ZipFile
+import os.path
+
+
+
 
 
 def test_main_zip(tmp_directory):
